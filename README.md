@@ -19,7 +19,7 @@
 2. Run `php artisan serve`
 
 # client
-1. frontend `cd client`
+1. client `cd client`
 2. Install `npm install`
 3. Run `npm run dev`
    

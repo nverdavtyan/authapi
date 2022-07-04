@@ -18,8 +18,7 @@ export default function SignIn() {
 
         const user = { email, password }
 
-        await axios.post('http://localhost:8000/api/login', user).then((res) => {
-
+       let res = await axios.post('http://localhost:8000/api/login', user)
             if (res.data.status === 200) {
                 swal(`Félicitations ${res.data.user} ${res.data.message}`)
                 console.log(res.data)
@@ -30,7 +29,7 @@ export default function SignIn() {
             } else {
                 setErrors(Object.values(res.data.validation_errors))
             }
-        });
+ 
 
 
 
